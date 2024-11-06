@@ -1,0 +1,225 @@
+/* Reset and Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+}
+
+.header {
+    background-color: #333;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+    color: #f0f8ff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header h3 {
+    font-size: 1.3em;
+    font-weight: 300;
+    color: #dcdcdc;
+    margin-top: 10px;
+}
+
+.header form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.note-heading-input, .note-content-input, select {
+    width: 90%;
+    max-width: 500px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.note-heading-input {
+    height: 40px;
+    font-weight: bold;
+}
+
+.note-content-input {
+    resize: vertical;
+}
+
+select {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #556cd6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    appearance: none;
+    width: 50%;
+    max-width: 200px;
+}
+
+select:hover {
+    background-color: #4050b5;
+}
+
+select:focus {
+    outline: none;
+    background-color: #31429d;
+}
+
+.add-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+.add-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.add-button:active {
+    background-color: #1e7e34;
+    transform: translateY(0);
+}
+
+.note-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.note {
+    width: 100%;
+    max-width: 300px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 15px;
+    overflow: auto;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.note:hover {
+    transform: scale(1.02);
+}
+
+.note h2.note-heading {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.note p.note-content {
+    margin: 10px 0 20px 0;
+    white-space: pre-wrap;
+}
+
+/* Color Variations */
+.yellow {
+    background-color: #feff9c;
+}
+
+.lightblue {
+    background-color: #add8e6;
+}
+
+.pink {
+    background-color: #ffb6c1;
+}
+
+.lightgreen {
+    background-color: #98fb98;
+}
+
+.orange {
+    background-color: #ffcc99;
+}
+
+.purple {
+    background-color: #d1c4e9;
+}
+
+.gray {
+    background-color: #e0e0e0;
+}
+
+/* Delete Button Styles */
+.delete-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+.delete-button:active {
+    background-color: #bd2130;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .note {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (min-width: 900px) {
+    .note {
+        width: calc(33.333% - 40px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .note {
+        width: calc(25% - 40px);
+    }
+}
